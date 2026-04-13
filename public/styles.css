@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: black;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+#menu-btn {
+  display: none;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  background-color: rgba(0,0,0,0.6);
+  background-blend-mode: overlay;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: orange;
+  border: none;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.dark {
+  background: #222;
+  color: white;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card, .project {
+  flex: 1;
+  padding: 40px;
+  background: #eee;
+}
+
+.project {
+  height: 200px;
+}
+
+/* CONTACT */
+form {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+
+  #menu-btn {
+    display: block;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
