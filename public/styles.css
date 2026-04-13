@@ -1,24 +1,44 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px 40px;
   background: black;
   color: white;
 }
 
-.navbar a {
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
   color: white;
-  margin-left: 20px;
   text-decoration: none;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  background: black;
+  padding: 10px;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 /* LOGO */
@@ -29,30 +49,41 @@
 }
 
 .logo img {
-  width: 35px;
+  height: 35px;
 }
 
-.logo span {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* HERO */
+/* HERO (🔥 SUPER ATTRACTIVE IMAGE + ZOOM) */
 .hero {
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+  background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1800&q=90') center/cover no-repeat;
   position: relative;
+  animation: zoom 20s ease-in-out infinite alternate;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* ZOOM ANIMATION */
+@keyframes zoom {
+  0% { background-size: 100%; }
+  100% { background-size: 110%; }
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  background: white;
+  cursor: pointer;
 }
 
 /* SECTION */
@@ -70,15 +101,14 @@
 .grid {
   display: flex;
   gap: 25px;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 /* CARDS */
 .card {
   flex: 1;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   transition: 0.3s;
 }
 
@@ -96,22 +126,14 @@
   padding: 15px;
 }
 
-/* PROJECTS */
+/* PROJECT */
 .project {
   flex: 1;
   height: 260px;
   background-size: cover;
   background-position: center;
   border-radius: 12px;
-  position: relative;
   transition: 0.3s;
-}
-
-.project::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.3);
 }
 
 .project:hover {
@@ -129,18 +151,4 @@ form {
 
 input, textarea {
   padding: 10px;
-}
-
-button {
-  padding: 10px;
-  background: black;
-  color: white;
-  border: none;
-}
-
-/* MOBILE */
-@media(max-width: 768px) {
-  .grid {
-    flex-direction: column;
-  }
 }
