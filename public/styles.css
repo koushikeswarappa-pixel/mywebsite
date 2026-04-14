@@ -1,154 +1,61 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-}
-
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  background: black;
+  background: #0f172a;
   color: white;
 }
 
-.menu {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.menu li {
-  position: relative;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-}
-
-/* DROPDOWN */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 30px;
-  background: black;
-  padding: 10px;
-  list-style: none;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  height: 35px;
-}
-
-/* HERO (🔥 SUPER ATTRACTIVE IMAGE + ZOOM) */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1800&q=90') center/cover no-repeat;
-  position: relative;
-  animation: zoom 20s ease-in-out infinite alternate;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ZOOM ANIMATION */
-@keyframes zoom {
-  0% { background-size: 100%; }
-  100% { background-size: 110%; }
-}
-
-/* BUTTON */
-button {
-  margin-top: 20px;
-  padding: 12px 20px;
-  border: none;
-  background: white;
-  cursor: pointer;
-}
-
-/* SECTION */
-.section {
-  padding: 70px;
+header {
   text-align: center;
+  padding: 40px;
 }
 
-.dark {
-  background: #111;
-  color: white;
-}
-
-/* GRID */
-.grid {
-  display: flex;
-  gap: 25px;
-  margin-top: 30px;
-}
-
-/* CARDS */
-.card {
-  flex: 1;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card img {
+.hero img {
   width: 100%;
-  height: 230px;
+  height: 400px;
   object-fit: cover;
 }
 
-.card h3 {
-  padding: 15px;
+.services {
+  text-align: center;
+  padding: 40px;
 }
 
-/* PROJECT */
-.project {
-  flex: 1;
-  height: 260px;
-  background-size: cover;
-  background-position: center;
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 30px;
   border-radius: 12px;
   transition: 0.3s;
 }
 
-.project:hover {
+.card:hover {
   transform: scale(1.05);
 }
 
-/* FORM */
-form {
-  width: 300px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.contact {
+  text-align: center;
+  padding: 40px;
 }
 
 input, textarea {
+  width: 300px;
   padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  background: #38bdf8;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
 }

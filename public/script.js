@@ -1,31 +1,20 @@
-function scrollToSection() {
-  document.getElementById("projects").scrollIntoView({
-    behavior: "smooth"
-  });
-}
-
-document.querySelectorAll(".dropdown > a").forEach(item => {
-  item.addEventListener("click", function(e) {
-    e.preventDefault();
-    let menu = this.nextElementSibling;
-
-    menu.style.display =
-      menu.style.display === "block" ? "none" : "block";
-  });
-});
-
-document.getElementById("form").onsubmit = async (e) => {
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  await fetch("/contact", {
+  const data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
+
+  const res = await fetch("http://localhost:5000/contact", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      name: name.value,
-      email: email.value,
-      message: message.value
-    })
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
   });
 
-  alert("Message sent!");
-};
+  const result = await res.json();
+  alert(result.message);
+});
