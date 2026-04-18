@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 app.post("/contact", (req, res) => {
   const { name, email, phone, message } = req.body;
 
-  console.log("New Contact Message:");
-  console.log({ name, email, phone, message });
+  console.log("New Contact:");
+  console.log(name, email, phone, message);
 
   res.json({
     success: true,
