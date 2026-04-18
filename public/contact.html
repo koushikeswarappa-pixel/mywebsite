@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us</title>
+<title>Contact - Creative Touch</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
 
 <nav>
 <a href="index.html">Home</a>
+<a href="about.html">About</a>
 
 <div class="dropdown">
 <button class="dropbtn">Services ▼</button>
@@ -28,46 +29,39 @@
 </nav>
 </header>
 
-<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');">
-<div class="overlay">
-<h1>Contact Creative Touch</h1>
-<p>Let's discuss your dream project today</p>
-</div>
-</section>
+<section class="contact-container">
 
-<section class="contact-grid">
+<h1>Contact Us</h1>
 
 <div class="contact-box">
 
+<div class="contact-info">
+<h2>Get in Touch</h2>
+<p><strong>📍 Location:</strong> Bangalore, India</p>
+<p><strong>📞 Phone:</strong> +91 9876543210</p>
+<p><strong>📧 Email:</strong> contact@creativetouch.com</p>
+</div>
+
+<div class="contact-form">
 <h2>Send Message</h2>
 
-<form id="contactForm">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="email" id="email" placeholder="Your Email" required>
-<input type="text" id="phone" placeholder="Phone Number">
-<textarea id="message" rows="6" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" required></textarea>
+<button type="submit">Send</button>
 </form>
-
-<p id="status"></p>
 
 </div>
 
-<div class="contact-box">
+</div>
 
-<h2>Office Details</h2>
-
-<p><strong>Company:</strong> Creative Touch</p>
-<p><strong>Address:</strong> Bengaluru, Karnataka, India</p>
-<p><strong>Phone:</strong> +91 9876543210</p>
-<p><strong>Email:</strong> info@creativetouch.com</p>
-<p><strong>Hours:</strong> Mon - Sat / 9AM - 7PM</p>
-
-<iframe
-class="map-box"
-src="https://www.google.com/maps?q=Bangalore&output=embed">
+<div class="map">
+<iframe 
+src="https://maps.google.com/maps?q=bangalore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+frameborder="0"
+allowfullscreen>
 </iframe>
-
 </div>
 
 </section>
@@ -76,6 +70,5 @@ src="https://www.google.com/maps?q=Bangalore&output=embed">
 <p>© 2026 Creative Touch</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
