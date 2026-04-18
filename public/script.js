@@ -1,26 +1,28 @@
-function showWelcome(){
-alert("Welcome to Creative Touch Fresh Website!");
+function welcome(){
+  alert("Welcome to Creative Touch!");
 }
 
 document.getElementById("contactForm").addEventListener("submit", async function(e){
 
-e.preventDefault();
+  e.preventDefault();
 
-const data = {
-name: document.getElementById("name").value,
-email: document.getElementById("email").value,
-message: document.getElementById("message").value
-};
+  const data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value
+  };
 
-const response = await fetch("/contact", {
-method: "POST",
-headers: {
-"Content-Type": "application/json"
-},
-body: JSON.stringify(data)
-});
+  const response = await fetch("/contact", {
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body: JSON.stringify(data)
+  });
 
-const result = await response.json();
+  const result = await response.json();
 
-document.getElementById("status").innerText = result.message;
+  document.getElementById("status").innerText = result.message;
+
+  this.reset();
 });

@@ -3,27 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creative Touch Fresh Website</title>
-
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23111'/%3E%3Ctext x='50%25' y='60%25' font-size='52' text-anchor='middle' fill='%23ff9800' font-family='Arial'%3ECT%3C/text%3E%3C/svg%3E">
-
+<title>Creative Touch</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <div class="brand">
-    <div class="logo-icon">CT</div>
-    <div class="logo-text">
-      <h2>Creative Touch</h2>
-      <span>Premium Construction</span>
-    </div>
-  </div>
+  <div class="logo">Creative Touch</div>
 
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#services">Services</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Services ▼</button>
+
+      <div class="dropdown-content">
+        <a href="#masdoor">Masdoor India</a>
+        <a href="#construction">Construction</a>
+        <a href="#interior">Interior Design</a>
+        <a href="#realestate">Real Estate</a>
+      </div>
+    </div>
+
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -31,58 +33,59 @@
 
 <section class="hero" id="home">
   <div class="overlay">
-    <h1>Creative Touch Fresh Website</h1>
-    <p>Luxury Construction • Elegant Interiors • Premium Design</p>
-    <button onclick="showWelcome()">Get Started</button>
+    <h1>Premium Construction & Interior Solutions</h1>
+    <p>Luxury spaces built with trust, quality and innovation.</p>
+    <button onclick="welcome()">Get Started</button>
   </div>
 </section>
 
-<section id="about" class="about">
-  <div>
-    <h2>About Us</h2>
-    <p>
-      We build dream homes, villas, offices and premium interiors with
-      innovation, trust and top-quality craftsmanship.
-    </p>
-  </div>
-
-  <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1000&q=80" alt="About">
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Creative Touch offers complete construction, interior design,
+    renovation, labour supply and real estate services with premium quality.
+  </p>
 </section>
 
-<section id="services">
-  <h2>Our Services</h2>
+<section id="masdoor" class="service">
+  <h2>Masdoor India</h2>
+  <p>
+    Skilled labour supply for construction, interiors, civil projects,
+    factories and commercial developments.
+  </p>
+</section>
 
-  <div class="cards">
+<section id="construction" class="service">
+  <h2>Construction</h2>
+  <p>
+    Home construction, villas, apartments, office spaces,
+    commercial buildings and turnkey solutions.
+  </p>
+</section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80">
-      <h3>Construction</h3>
-      <p>Residential and commercial construction solutions.</p>
-    </div>
+<section id="interior" class="service">
+  <h2>Interior Design</h2>
+  <p>
+    Elegant kitchen design, wardrobes, false ceiling,
+    office interiors and modern luxury finishing.
+  </p>
+</section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80">
-      <h3>Interior Design</h3>
-      <p>Luxury interiors with elegant modern style.</p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80">
-      <h3>Renovation</h3>
-      <p>Transform old spaces into premium modern masterpieces.</p>
-    </div>
-
-  </div>
+<section id="realestate" class="service">
+  <h2>Real Estate</h2>
+  <p>
+    Property buying, selling, investment consulting,
+    legal guidance and site development assistance.
+  </p>
 </section>
 
 <section id="gallery">
   <h2>Project Gallery</h2>
 
-  <div class="gallery-grid">
+  <div class="gallery">
     <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80">
     <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
     <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80">
-    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=900&q=80">
   </div>
 </section>
 
@@ -100,7 +103,7 @@
 </section>
 
 <footer>
-  <p>© 2026 Creative Touch Fresh Website</p>
+  <p>© 2026 Creative Touch</p>
 </footer>
 
 <script src="script.js"></script>
