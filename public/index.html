@@ -18,7 +18,7 @@
         line-height: 1.6;
     }
 
-    /* NAVBAR */
+    /* HEADER */
     header {
         position: fixed;
         width: 100%;
@@ -38,22 +38,73 @@
         font-weight: bold;
     }
 
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
     nav a {
         color: #fff;
         margin-left: 20px;
         text-decoration: none;
         font-size: 16px;
         transition: 0.3s;
+        padding-bottom: 3px;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a.active {
         color: #f4a261;
+        border-bottom: 2px solid #f4a261;
+    }
+
+    /* DROPDOWN */
+    .dropdown {
+        position: relative;
+        margin-left: 20px;
+    }
+
+    .dropbtn {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        padding-bottom: 3px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        background: #222;
+        min-width: 180px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .dropdown-content a {
+        display: block;
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+        background: #f4a261;
+        color: #000;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
     }
 
     /* SECTIONS */
     section {
-        padding: 100px 20px;
+        padding: 120px 20px;
         min-height: 100vh;
+        scroll-margin-top: 80px;
     }
 
     #home {
@@ -126,19 +177,36 @@
 
 <header>
     <div class="logo">Creative Touch</div>
+
     <nav>
-        <a href="#home">Home</a>
+        <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
-        <a href="#services">Services</a>
+
+        <!-- SERVICES DROPDOWN -->
+        <div class="dropdown">
+            <span class="dropbtn">Services ▾</span>
+            <div class="dropdown-content">
+                <a href="#services">All Services</a>
+                <a href="#services">Residential Construction</a>
+                <a href="#services">Commercial Buildings</a>
+                <a href="#services">Interior Design</a>
+                <a href="#services">Renovation Works</a>
+            </div>
+        </div>
+
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <!-- HOME -->
 <section id="home">
-    <h1>Best Construction Company</h1>
-    <p>We build modern, strong and beautiful structures</p>
-    <button class="btn" onclick="document.querySelector('#contact').scrollIntoView()">Contact Us</button>
+    <div>
+        <h1>Best Construction Company</h1>
+        <p>We build modern, strong and beautiful structures</p>
+        <button class="btn" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">
+            Contact Us
+        </button>
+    </div>
 </section>
 
 <!-- ABOUT -->
@@ -179,6 +247,30 @@
 <footer>
     © 2026 Creative Touch Construction. All Rights Reserved.
 </footer>
+
+<!-- ACTIVE MENU SCRIPT -->
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 150) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
