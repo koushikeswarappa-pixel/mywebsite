@@ -9,6 +9,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.post("/contact", (req, res) => {
+  const { name, email, phone, message } = req.body;
+
+  console.log("New Contact:");
+  console.log(name, email, phone, message);
+
   res.json({
     success: true,
     message: "Thank you! We will contact you soon."
@@ -16,5 +21,5 @@ app.post("/contact", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
