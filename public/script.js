@@ -6,7 +6,6 @@ const form = document.getElementById("contactForm");
 
 if(form){
 form.addEventListener("submit", async function(e){
-
 e.preventDefault();
 
 const data = {
@@ -18,10 +17,8 @@ message: document.getElementById("message").value
 
 const res = await fetch("/contact", {
 method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify(data)
+headers:{ "Content-Type":"application/json" },
+body: JSON.stringify(data)
 });
 
 const result = await res.json();
@@ -29,6 +26,5 @@ const result = await res.json();
 document.getElementById("status").innerText = result.message;
 
 form.reset();
-
 });
 }

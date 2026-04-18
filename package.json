@@ -1,7 +1,7 @@
 {
   "name": "mywebsite",
   "version": "1.0.0",
-  "description": "Creative Touch Full Website",
+  "description": "Creative Touch Multi Page Website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

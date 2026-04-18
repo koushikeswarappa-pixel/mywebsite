@@ -8,6 +8,7 @@ font-family:Arial,sans-serif;
 body{
 line-height:1.6;
 color:#222;
+background:#fff;
 }
 
 header{
@@ -38,8 +39,8 @@ color:#fff;
 text-decoration:none;
 background:none;
 border:none;
-cursor:pointer;
 font-size:16px;
+cursor:pointer;
 }
 
 .dropdown{
@@ -49,7 +50,7 @@ position:relative;
 .dropdown-content{
 display:none;
 position:absolute;
-top:35px;
+top:34px;
 left:0;
 background:#fff;
 min-width:220px;
@@ -61,11 +62,10 @@ z-index:100;
 display:block;
 padding:12px;
 color:#111;
-text-decoration:none;
 }
 
 .dropdown-content a:hover{
-background:#f2f2f2;
+background:#f3f3f3;
 }
 
 .dropdown:hover .dropdown-content{
@@ -167,10 +167,6 @@ height:320px;
 border:0;
 border-radius:12px;
 margin-top:20px;
-}
-
-form{
-max-width:100%;
 }
 
 input,textarea{
