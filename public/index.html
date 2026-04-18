@@ -1,48 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creative Touch</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Creative Touch Construction</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: #111;
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .logo {
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    nav a {
+        color: #fff;
+        margin-left: 20px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #f4a261;
+    }
+
+    /* SECTIONS */
+    section {
+        padding: 100px 20px;
+        min-height: 100vh;
+    }
+
+    #home {
+        background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    #home h1 {
+        font-size: 50px;
+    }
+
+    #home p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #f4a261;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    #about, #services, #contact {
+        background: #f5f5f5;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    footer {
+        background: #111;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+</style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">Creative Touch</div>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-
-<div class="dropdown">
-<button class="dropbtn">Services ▼</button>
-<div class="dropdown-content">
-<a href="masdoor.html">Masdoor India</a>
-<a href="construction.html">Construction</a>
-<a href="interior.html">Interior Design</a>
-<a href="realestate.html">Real Estate</a>
-</div>
-</div>
-
-<a href="contact.html">Contact</a>
-</nav>
+    <div class="logo">Creative Touch</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80');">
-<div class="overlay">
-<h1>Premium Construction & Interior Solutions</h1>
-<p>Creative spaces built with trust and perfection.</p>
-</div>
+<!-- HOME -->
+<section id="home">
+    <h1>Best Construction Company</h1>
+    <p>We build modern, strong and beautiful structures</p>
+    <button class="btn" onclick="document.querySelector('#contact').scrollIntoView()">Contact Us</button>
 </section>
 
-<section>
-<h2>Welcome to Creative Touch</h2>
-<p>We provide construction, manpower, interiors and real estate solutions.</p>
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>
+            Creative Touch is a trusted construction company delivering high-quality residential
+            and commercial projects with innovation and precision.
+        </p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <div class="services-grid">
+            <div class="card">Residential Construction</div>
+            <div class="card">Commercial Buildings</div>
+            <div class="card">Interior Design</div>
+            <div class="card">Renovation Works</div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>Phone: +91 98765 43210</p>
+        <p>Email: info@creativetouch.com</p>
+        <p>Location: Mysore, Karnataka</p>
+    </div>
 </section>
 
 <footer>
-<p>© 2026 Creative Touch</p>
+    © 2026 Creative Touch Construction. All Rights Reserved.
 </footer>
 
 </body>
