@@ -1,12 +1,23 @@
 {
-  "name": "fresh-website",
+  "name": "creative-touch-fresh-website",
   "version": "1.0.0",
-  "main": "backend/server.js",
+  "description": "Creative Touch Fresh Website Full Stack Project",
+  "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
+  "keywords": [
+    "creative-touch",
+    "website",
+    "construction",
+    "interior-design",
+    "nodejs",
+    "express"
+  ],
+  "author": "Creative Touch",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "express": "^4.19.2"
   }
 }

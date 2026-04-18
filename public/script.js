@@ -1,20 +1,26 @@
-document.getElementById("contactForm").addEventListener("submit", async (e) => {
-  e.preventDefault();
+function showWelcome(){
+alert("Welcome to Creative Touch Fresh Website!");
+}
 
-  const data = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value
-  };
+document.getElementById("contactForm").addEventListener("submit", async function(e){
 
-  const res = await fetch("https://your-app.onrender.com/contact", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  });
+e.preventDefault();
 
-  const result = await res.json();
-  alert(result.message);
+const data = {
+name: document.getElementById("name").value,
+email: document.getElementById("email").value,
+message: document.getElementById("message").value
+};
+
+const response = await fetch("/contact", {
+method: "POST",
+headers: {
+"Content-Type": "application/json"
+},
+body: JSON.stringify(data)
+});
+
+const result = await response.json();
+
+document.getElementById("status").innerText = result.message;
 });

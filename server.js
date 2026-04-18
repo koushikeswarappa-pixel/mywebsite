@@ -2,33 +2,45 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-
-app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/index.html"));
-});
-
-app.get("/services", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/services.html"));
-});
-
-app.get("/projects", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/projects.html"));
-});
-
-app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/contact.html"));
-});
-
-app.post("/contact", (req, res) => {
-  console.log(req.body);
-  res.json({ message: "Message sent!" });
-});
-
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log("Server running on port " + PORT);
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Static frontend files
+app.use(express.static(path.join(__dirname, "public")));
+
+// Home Route
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+// Contact Form API
+app.post("/contact", (req, res) => {
+  const { name, email, message } = req.body;
+
+  console.log("===== New Contact Inquiry =====");
+  console.log("Name:", name);
+  console.log("Email:", email);
+  console.log("Message:", message);
+  console.log("===============================");
+
+  res.json({
+    success: true,
+    message: "Thank you! Your message has been received successfully."
+  });
+});
+
+// 404 Route
+app.use((req, res) => {
+  res.status(404).send("Page Not Found");
+});
+
+// Start Server
+app.listen(PORT, () => {
+  console.log("=================================");
+  console.log("Creative Touch Fresh Website");
+  console.log(`Server Running: http://localhost:${PORT}`);
+  console.log("=================================");
 });
