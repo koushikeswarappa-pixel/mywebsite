@@ -8,16 +8,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
-
 app.post("/contact", (req, res) => {
-  const { name, email, message } = req.body;
-
-  console.log("New Contact Message:");
-  console.log(name, email, message);
-
   res.json({
     success: true,
     message: "Thank you! We will contact you soon."
@@ -25,5 +16,5 @@ app.post("/contact", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });

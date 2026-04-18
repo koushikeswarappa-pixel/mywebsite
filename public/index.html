@@ -9,101 +9,82 @@
 <body>
 
 <header>
-  <div class="logo">Creative Touch</div>
+<div class="logo">Creative Touch</div>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
+<nav>
+<a href="index.html">Home</a>
+<a href="#about">About</a>
 
-    <div class="dropdown">
-      <button class="dropbtn">Services ▼</button>
+<div class="dropdown">
+<button class="dropbtn">Services ▼</button>
+<div class="dropdown-content">
+<a href="masdoor.html">Masdoor India</a>
+<a href="construction.html">Construction</a>
+<a href="interior.html">Interior Design</a>
+<a href="realestate.html">Real Estate</a>
+</div>
+</div>
 
-      <div class="dropdown-content">
-        <a href="#masdoor">Masdoor India</a>
-        <a href="#construction">Construction</a>
-        <a href="#interior">Interior Design</a>
-        <a href="#realestate">Real Estate</a>
-      </div>
-    </div>
-
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<section class="hero" id="home">
-  <div class="overlay">
-    <h1>Premium Construction & Interior Solutions</h1>
-    <p>Luxury spaces built with trust, quality and innovation.</p>
-    <button onclick="welcome()">Get Started</button>
-  </div>
+<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1600&q=80');">
+<div class="overlay">
+<h1>Premium Construction & Interior Solutions</h1>
+<p>Creative spaces built with trust, style and perfection.</p>
+</div>
 </section>
 
 <section id="about">
-  <h2>About Us</h2>
-  <p>
-    Creative Touch offers complete construction, interior design,
-    renovation, labour supply and real estate services with premium quality.
-  </p>
+<h2>About Us</h2>
+<p>
+Creative Touch offers premium construction, interiors,
+real estate and skilled manpower services.
+</p>
 </section>
 
-<section id="masdoor" class="service">
-  <h2>Masdoor India</h2>
-  <p>
-    Skilled labour supply for construction, interiors, civil projects,
-    factories and commercial developments.
-  </p>
-</section>
+<section>
+<h2>Our Services</h2>
 
-<section id="construction" class="service">
-  <h2>Construction</h2>
-  <p>
-    Home construction, villas, apartments, office spaces,
-    commercial buildings and turnkey solutions.
-  </p>
-</section>
+<div class="cards">
 
-<section id="interior" class="service">
-  <h2>Interior Design</h2>
-  <p>
-    Elegant kitchen design, wardrobes, false ceiling,
-    office interiors and modern luxury finishing.
-  </p>
-</section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80">
+<h3>Masdoor India</h3>
+<p>Reliable labour supply solutions.</p>
+</div>
 
-<section id="realestate" class="service">
-  <h2>Real Estate</h2>
-  <p>
-    Property buying, selling, investment consulting,
-    legal guidance and site development assistance.
-  </p>
-</section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80">
+<h3>Construction</h3>
+<p>Residential and commercial projects.</p>
+</div>
 
-<section id="gallery">
-  <h2>Project Gallery</h2>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80">
+<h3>Interior Design</h3>
+<p>Luxury modern interiors.</p>
+</div>
 
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
-    <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80">
-  </div>
+</div>
 </section>
 
 <section id="contact">
-  <h2>Contact Us</h2>
+<h2>Contact Us</h2>
 
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
-    <textarea id="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+<form id="contactForm">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<textarea id="message" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
 
-  <p id="status"></p>
+<p id="status"></p>
 </section>
 
 <footer>
-  <p>© 2026 Creative Touch</p>
+<p>© 2026 Creative Touch</p>
 </footer>
 
 <script src="script.js"></script>
