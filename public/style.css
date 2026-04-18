@@ -13,7 +13,7 @@ color:#222;
 header{
 background:#111;
 color:#fff;
-padding:20px 40px;
+padding:18px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -22,7 +22,27 @@ top:0;
 z-index:1000;
 }
 
-.logo{
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-box{
+width:58px;
+height:58px;
+background:#ff9800;
+color:#fff;
+font-size:24px;
+font-weight:bold;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:12px;
+box-shadow:0 8px 15px rgba(0,0,0,0.2);
+}
+
+.logo-text{
 font-size:28px;
 font-weight:bold;
 }
@@ -45,8 +65,8 @@ text-align:center;
 .overlay{
 background:rgba(0,0,0,0.55);
 padding:50px;
+border-radius:14px;
 color:#fff;
-border-radius:12px;
 }
 
 .overlay h1{
@@ -65,7 +85,7 @@ background:#ff9800;
 color:#fff;
 border:none;
 cursor:pointer;
-border-radius:6px;
+border-radius:8px;
 }
 
 section{
@@ -79,16 +99,9 @@ gap:40px;
 align-items:center;
 }
 
-.about img{
+.about-img img{
 width:100%;
 border-radius:14px;
-}
-
-#services h2,
-#gallery h2,
-#contact h2{
-text-align:center;
-margin-bottom:30px;
 }
 
 .cards{
@@ -99,9 +112,9 @@ gap:25px;
 
 .card{
 background:#fff;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
 border-radius:14px;
 overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
 text-align:center;
 }
 
@@ -142,7 +155,7 @@ max-width:600px;
 margin:auto;
 }
 
-input, textarea{
+input,textarea{
 width:100%;
 padding:12px;
 margin:10px 0;
@@ -159,6 +172,12 @@ margin-top:40px;
 }
 
 @media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
 .about{
 grid-template-columns:1fr;
 }
@@ -167,8 +186,13 @@ grid-template-columns:1fr;
 font-size:36px;
 }
 
-header{
-flex-direction:column;
-gap:15px;
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+nav a{
+margin:8px;
 }
 }
