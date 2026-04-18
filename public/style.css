@@ -1,49 +1,65 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #222;
-  color: #fff;
-  padding: 15px 30px;
+  color: white;
+  padding: 15px 40px;
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
+  font-size: 16px;
 }
 
 nav a:hover {
   color: #f4b400;
 }
 
+/* DROPDOWN */
 .dropdown {
-  display: inline-block;
   position: relative;
 }
 
 .dropbtn {
   background: none;
-  color: white;
   border: none;
+  color: white;
+  font-size: 16px;
   cursor: pointer;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 35px;
   background: white;
-  min-width: 150px;
+  min-width: 180px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
@@ -56,9 +72,11 @@ nav a:hover {
   display: block;
 }
 
+/* HERO */
 .hero {
   height: 80vh;
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,6 +89,13 @@ nav a:hover {
   text-align: center;
 }
 
+/* SECTIONS */
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* CARDS */
 .cards {
   display: flex;
   gap: 20px;
@@ -80,7 +105,6 @@ nav a:hover {
 .card {
   flex: 1;
   border: 1px solid #ddd;
-  text-align: center;
   padding: 10px;
 }
 
@@ -88,13 +112,17 @@ nav a:hover {
   width: 100%;
 }
 
+/* ABOUT */
 .about {
-  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
 }
 
+/* FOOTER */
 footer {
   background: #222;
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
 }
