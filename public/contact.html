@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact</title>
+<title>Contact Us</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
 <div class="logo">Creative Touch</div>
+
 <nav>
 <a href="index.html">Home</a>
-<a href="about.html">About</a>
 
 <div class="dropdown">
 <button class="dropbtn">Services ▼</button>
@@ -28,15 +28,54 @@
 </nav>
 </header>
 
-<section>
-<h1>Contact Us</h1>
-<p>Email: contact@creativetouch.com</p>
-<p>Phone: +91 9876543210</p>
+<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80');">
+<div class="overlay">
+<h1>Contact Creative Touch</h1>
+<p>Let's discuss your dream project today</p>
+</div>
+</section>
+
+<section class="contact-grid">
+
+<div class="contact-box">
+
+<h2>Send Message</h2>
+
+<form id="contactForm">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="email" id="email" placeholder="Your Email" required>
+<input type="text" id="phone" placeholder="Phone Number">
+<textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+<p id="status"></p>
+
+</div>
+
+<div class="contact-box">
+
+<h2>Office Details</h2>
+
+<p><strong>Company:</strong> Creative Touch</p>
+<p><strong>Address:</strong> Bengaluru, Karnataka, India</p>
+<p><strong>Phone:</strong> +91 9876543210</p>
+<p><strong>Email:</strong> info@creativetouch.com</p>
+<p><strong>Hours:</strong> Mon - Sat / 9AM - 7PM</p>
+
+<iframe
+class="map-box"
+src="https://www.google.com/maps?q=Bangalore&output=embed">
+</iframe>
+
+</div>
+
 </section>
 
 <footer>
 <p>© 2026 Creative Touch</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
